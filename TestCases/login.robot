@@ -12,7 +12,10 @@ TestMorise
     close browser
 *** Keywords ***
 MoriseKeywords
-    input text  name:email  obekevicent@gmail.com
-    input text  name:password  1234
-    click element  name:form1
+  ${email_text_name}  set variable  name:email
+  ${password_text_name}  set variable  name:password
+  ${login_btn_name}  set variable  name:form1
+  input text  ${email_text_name}  obekevicent@gmail.com
+  input text  ${password_text_name}  1234
+  click element  ${login_btn_name}
 
